@@ -2,6 +2,7 @@
 
 html {
   background-image: linear-gradient(#8590aa, #c4dbf6);
+  height: 100%;
   /* background-color: #8590aa; */
 }
 
@@ -98,4 +99,45 @@ img {
   margin-right: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+
+@media screen and (min-width: 1024px) {
+  .newsContainer {
+    clear: both;
+    margin-left: 200px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .newsContainer {
+    clear: both;
+    margin-left: 150px;
+  }
+}
+
+@media screen and (max-width: 799px) {
+  .newsContainer {
+    clear: both;
+    margin-left: 10px;
+  }
+}
+
+.newsItem {
+  margin-left: 20px;
+}
+
+.newsItem h2 {
+  margin-top: 30px;
+  line-height: 0;
+  color: #b23850;
+}
+
+.dateDisplay {
+  font-size: smaller;
+  margin-left: 10px;
+  opacity: 0.9;
+}
+
+.forceBelow {
+  clear: both;
 }
