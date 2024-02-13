@@ -5,32 +5,37 @@ import MenuBar from "./menu-bar";
 const tempMenuData = {
   menus: [
     {
+      title: "Home",
+      mainLink: "/",
+      menuItems: [],
+    },
+    {
       title: "Books",
-      mainLink: "https://privateerpress.com",
+      mainLink: "books",
       menuItems: [
         {
           text: "I Like Monsters (Except My Teacher)",
-          target: "target.com",
+          target: "i-like-monsters",
         },
         {
           text: "I Like Monsters Book 2 (title TBD)",
-          target: "steampowered.com",
+          target: "monsters-book-2",
         },
       ],
     },
     {
-      title: "About Me",
-      mainLink: "https://privateerpress.com",
-      menuItems: [
-        {
-          text: "placeholder",
-          target: "placeholder",
-        },
-      ],
+      title: "Meet the Author",
+      mainLink: "about-me",
+      menuItems: [],
+    },
+    {
+      title: "Book Recommendations",
+      mainLink: "book-recommendations",
+      menuItems: [],
     },
     {
       title: "Other Projects",
-      mainLink: "https://privateerpress.com",
+      mainLink: "other-projects",
       menuItems: [
         {
           text: "Indulgent Creativity",
@@ -48,10 +53,10 @@ const tempMenuData = {
 export default function Layout({ children }) {
   return (
     <div className={styles.container}>
-      <div className="pageHeader">
-        <Banner />
-        <MenuBar menus={tempMenuData} />
-      </div>
+      {/* <div className="pageHeader"> */}
+      <Banner />
+      <MenuBar menus={tempMenuData} />
+      {/* </div> */}
       {children}
     </div>
   );

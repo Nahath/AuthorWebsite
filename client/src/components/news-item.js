@@ -1,3 +1,5 @@
+import ReactHtmlParser from "react-html-parser";
+
 //newsData is thus:
 // {
 //    title:,
@@ -9,7 +11,10 @@ export default function NewsItem({ newsData }) {
     <div className="newsItem">
       <h2>{newsData.title}</h2>
       <div className="dateDisplay">{newsData.date}</div>
-      <div>{newsData.details}</div>
+      {/* <div
+        dangerouslySetInnerHTML={{ __html: this.htmlDecode(newsData.details) }}
+      /> */}
+      <div>{ReactHtmlParser(newsData.details)}</div>
     </div>
   );
 }

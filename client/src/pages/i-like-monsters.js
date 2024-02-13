@@ -1,5 +1,6 @@
 import Head from "next/head";
 import Pitch from "../components/pitch";
+import Chapter1 from "../components/chapter1";
 
 export default function ILikeMonsters() {
   return (
@@ -10,9 +11,7 @@ export default function ILikeMonsters() {
       </Head>
       <h2>I Like Monsters (Except My Teacher)</h2>
       <Pitch />
-      <div>
-        First chapter goes here. Make sure it has a tag for direct linking.
-      </div>
+      <Chapter1 />
     </>
   );
 }

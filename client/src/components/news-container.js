@@ -18,25 +18,27 @@ export default function NewsContainer({ newsItems }) {
   var tempNewsItems = {
     newsItems: [
       {
-        title: "First",
-        details: "Turkeys are our friends",
-        date: "August 10, 2023",
+        title: "Book 2 Status",
+        details:
+          "<p>I am happy with most of my outline as I seek to balance character and conflict depth with the fun lighthearted tone I established in the first book.</p><p>The only remaining hang-up is that I have a critical event that I haven't quite figured out all the setup for. It's easy to set up a mediocre version, but I really need it to hit. I don't have a target release date, yet, but I will update here when I do.</p>",
+        date: "January 29, 2024",
       },
       {
-        title: "Second",
+        title: "We Are Live",
         details:
-          "This is a much longer news item. Many many many things go here. This is a much longer news item. Many many many things go here.",
-        date: "September 9, 2023",
+          "<p>Our website has entered the world to great fanfare and rejoicing.</p>",
+        date: "January 4, 2024",
       },
     ],
   };
   newsItems = tempNewsItems.newsItems;
   return (
     <div className="newsContainer">
-      <h1>Latest Updates</h1>
+      <h1>Latest News</h1>
       {newsItems.map((item) => {
         return <NewsItem newsData={item} />;
       })}
+      <br />
     </div>
   );
 }

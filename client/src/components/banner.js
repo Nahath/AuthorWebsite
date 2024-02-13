@@ -1,7 +1,13 @@
+import Link from "next/link";
+
 export default function Banner() {
   return (
     <div className="banner">
-      <h1>Joshua McDonald</h1>
+      <Link className="nonFormatted" href="/">
+        Joshua
+        <br />
+        <span className="negativeTopMargin">McDonald</span>
+      </Link>
     </div>
   );
 }

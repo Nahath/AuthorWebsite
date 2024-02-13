@@ -1,18 +1,29 @@
 @import url("fonts.css");
 
 html {
-  background-image: linear-gradient(#8590aa, #c4dbf6);
   height: 100%;
   /* background-color: #8590aa; */
 }
 
 body {
+  /* background-image: linear-gradient(#8590aa, #c4dbf6);
+  background-repeat: no-repeat;
+  background-attachment: fixed; */
+  /* background-image: url("../../public/images/BlackWhiteCover.jpg"); */
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("../../public/images/BlackWhiteCover.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
   padding: 0;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
   font-size: 18px;
+  height: 100%;
+  color: white;
 }
 
 * {
@@ -20,9 +31,11 @@ body {
 }
 
 a.menuHeader {
-  color: black;
+  color: white;
   text-decoration: none;
   font-size: larger;
+  font-family: "Redressed";
+  font-size: 28px;
 }
 
 a:hover {
@@ -43,42 +56,54 @@ img {
 .banner {
   text-align: center;
   /* background-color: blue; */
-  font-family: "Luminari", fantasy;
-  font-size: larger;
+  font-family: "Spicy Rice", fantasy;
+  font-weight: unset;
+  font-size: 67px;
+  color: white;
+  grid-column: 1 / 4;
 }
 
 .menu {
   display: inline-block;
-  margin-right: 30px;
 }
 
 .navbar {
   display: flex;
-  align-items: center;
+  justify-content: space-around;
   flex-wrap: wrap;
   list-style: none;
   vertical-align: top;
+  color: white;
 }
 
 .dropdown-list {
+  visibility: hidden;
   position: absolute;
-  display: none;
+  /* display: none; */
   list-style: none;
   padding: unset;
   margin: unset;
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
 .menu:hover .dropdown-list {
-  display: block;
+  visibility: visible;
+  /* display: block; */
   text-align: left;
+  opacity: 1;
   /* opacity: 0.3;
   background-color: #3b8beb; */
-  background: rgba(59, 139, 235, 0.7);
   padding: 6px;
+  z-index: 10;
+}
+
+.non-home-dropdown {
+  background: rgba(59, 139, 235, 1);
 }
 
 .dropdown-menu-item a {
-  color: black;
+  color: white;
   text-decoration: none;
   padding: 2px;
 }
@@ -88,12 +113,6 @@ img {
 }
 
 .imageContainer {
-  position: relative;
-  float: left;
-  max-width: 320px;
-  max-height: 512px;
-  min-width: 160px;
-  min-height: 256px;
   /* Not sure why CSS doesn't let me set margins in one line on floating elements */
   margin-left: 10px;
   margin-right: 10px;
@@ -104,14 +123,14 @@ img {
 @media screen and (min-width: 1024px) {
   .newsContainer {
     clear: both;
-    margin-left: 200px;
+    margin-left: 20px;
   }
 }
 
 @media screen and (min-width: 800px) {
   .newsContainer {
     clear: both;
-    margin-left: 150px;
+    margin-left: 20px;
   }
 }
 
@@ -140,4 +159,43 @@ img {
 
 .forceBelow {
   clear: both;
+}
+
+.chapter-1-link {
+}
+
+.simpleText {
+  margin: 10px;
+}
+
+.nonFormatted {
+  all: unset;
+}
+
+.nonFormatted:hover {
+  all: unset;
+  cursor: pointer;
+}
+
+.generalText {
+  margin: 12px;
+}
+
+nav {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  grid-column: 1 / 4;
+  width: 100%;
+}
+
+.negativeTopMargin {
+  display: block;
+  margin-top: -0.6em;
+}
+
+.pitch {
+  grid-column: 1/4;
+  display: flex;
+  justify-content: space-around;
 }
