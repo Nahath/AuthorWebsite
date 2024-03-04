@@ -1,15 +1,14 @@
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/router";
 
 export default function Menu({ menuData }) {
-  let location = "";
-  if (typeof window !== "undefined") {
-    location = window.location.pathname;
-  }
+  const router = useRouter();
+  const { pathname } = router;
 
   let content = null;
   let className = "dropdown-list";
-  if (location !== "/") {
+  if (pathname !== "/") {
     className += " non-home-dropdown";
   }
 

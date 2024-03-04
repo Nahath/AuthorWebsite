@@ -1,6 +1,7 @@
 import Menu from "./menu";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 // menus object:
 // {
@@ -56,7 +57,7 @@ const tempMenuData = {
     },
   ],
 };
-export default function MenuBar() {
+export default function MobileMenuBar() {
   const [navClass, setNavClass] = useState("nonHomeNav");
 
   const router = useRouter();
@@ -73,12 +74,27 @@ export default function MenuBar() {
   let menus = tempMenuData.menus;
 
   return (
-    <nav className={navClass + " desktopNav"}>
-      <ul className="navbar">
+    <nav className={navClass + " mobileNav"}>
+      <ul>
         {menus.map((menu) => {
+          let content = "";
+          if (menu.menuItems.length > 0) {
+            content = (
+              <ul>
+                {menu.menuItems.map((item, index) => {
+                  return (
+                    <li key={item.title}>
+                      <Link href={item.target}>{item.text}</Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            );
+          }
           return (
-            <li className="menu" key={menu.title}>
-              <Menu menuData={menu} />
+            <li key={menu.title}>
+              <Link href={menu.mainLink}>{menu.title}</Link>
+              {content}
             </li>
           );
         })}

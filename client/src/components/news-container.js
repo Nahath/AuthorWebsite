@@ -34,10 +34,13 @@ export default function NewsContainer({ newsItems }) {
   newsItems = tempNewsItems.newsItems;
   return (
     <div className="newsContainer">
-      <h1>Latest News</h1>
+      <div className="newsHeader">Latest News</div>
       {newsItems.map((item) => {
-        return <NewsItem newsData={item} />;
+        return <NewsItem newsData={item} key={item.title} />;
       })}
+      <br />
+      <br />
+      <br />
       <br />
     </div>
   );

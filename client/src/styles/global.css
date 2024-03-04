@@ -3,6 +3,9 @@
 html {
   height: 100%;
   /* background-color: #8590aa; */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -10,9 +13,11 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed; */
   /* background-image: url("../../public/images/BlackWhiteCover.jpg"); */
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+
+  background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)),
     url("../../public/images/BlackWhiteCover.jpg");
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-size: cover;
   background-position: center center;
   height: 100vh;
@@ -26,14 +31,35 @@ body {
   color: white;
 }
 
+a {
+  color: white;
+}
+
+.topSection {
+  max-width: 72rem;
+  padding: 0 1rem;
+  margin: 1rem auto 3rem;
+}
+
+/* The use of both "bottomSection" and "bottomContent" is to allow a background that completely covers the body's background 
+while still using the same margins and padding as the top */
+.bottomSection {
+  background-color: white;
+  color: black;
+}
+
+.bottomContent {
+  max-width: 72rem;
+  padding: 0 1rem;
+  margin: 1rem auto 3rem;
+}
+
 * {
   box-sizing: border-box;
 }
 
 a.menuHeader {
-  color: white;
   text-decoration: none;
-  font-size: larger;
   font-family: "Redressed";
   font-size: 28px;
 }
@@ -60,7 +86,7 @@ img {
   font-weight: unset;
   font-size: 67px;
   color: white;
-  grid-column: 1 / 4;
+  /* grid-column: 1 / 4; */
 }
 
 .menu {
@@ -73,7 +99,6 @@ img {
   flex-wrap: wrap;
   list-style: none;
   vertical-align: top;
-  color: white;
 }
 
 .dropdown-list {
@@ -94,18 +119,20 @@ img {
   opacity: 1;
   /* opacity: 0.3;
   background-color: #3b8beb; */
-  padding: 6px;
+  padding: 2px;
   z-index: 10;
+  font-size: 20px;
 }
 
 .non-home-dropdown {
-  background: rgba(59, 139, 235, 1);
+  background-color: white;
+  /* background: rgba(59, 139, 235, 1); */
 }
 
 .dropdown-menu-item a {
-  color: white;
   text-decoration: none;
-  padding: 2px;
+  padding: 2px 2px 2px 6px;
+  white-space: nowrap;
 }
 
 .dropdown-menu-item a:hover {
@@ -114,10 +141,22 @@ img {
 
 .imageContainer {
   /* Not sure why CSS doesn't let me set margins in one line on floating elements */
-  margin-left: 10px;
-  margin-right: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 50px;
+  padding: 0;
+}
+
+.newsContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding-top: 8em;
+}
+
+.newsHeader {
+  grid-column: 1/4;
+  text-align: center;
+  font-family: "Spicy Rice";
+  color: #2dea3b;
+  font-size: 50px;
 }
 
 @media screen and (min-width: 1024px) {
@@ -151,6 +190,10 @@ img {
   color: #b23850;
 }
 
+.newsItem a {
+  color: blue;
+}
+
 .dateDisplay {
   font-size: smaller;
   margin-left: 10px;
@@ -162,6 +205,12 @@ img {
 }
 
 .chapter-1-link {
+  font-size: 18px;
+  padding: 0.5em 2em 0.5em 2em;
+  background-color: #e65746;
+  color: white;
+  border: none;
+  border-radius: 3px;
 }
 
 .simpleText {
@@ -185,8 +234,21 @@ nav {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  grid-column: 1 / 4;
+  /* grid-column: 1 / 4; */
   width: 100%;
+}
+
+.nonHomeNav {
+  color: black;
+  background-color: white;
+  padding: 0.5em 2em 0.5em 2em;
+}
+
+.nonHomeNav a {
+  color: black;
+  font-size: 22px;
+  font-family: Arial;
+  margin: 0 0.5em 0 0.5em;
 }
 
 .negativeTopMargin {
@@ -195,7 +257,64 @@ nav {
 }
 
 .pitch {
-  grid-column: 1/4;
-  display: flex;
+  /* grid-column: 1/4; */
   justify-content: space-around;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 4em;
+}
+
+@media (max-width: 1024px) {
+  .pitch {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pitchText {
+  margin: 3em;
+  text-align: center;
+}
+
+.fancyTitle {
+  font-family: "Spicy Rice", fantasy;
+  text-align: center;
+  margin-top: -3em;
+}
+.title-i-like {
+  font-size: 45px;
+  margin-top: -1em;
+}
+
+.title-monsters {
+  color: #2dea3b;
+  font-size: 110px;
+  margin-top: -0.8em;
+}
+
+.title-except-my-teacher {
+  font-size: 30px;
+  margin-top: -2em;
+}
+
+.chapter1Header {
+  text-align: center;
+}
+
+.chapter1Header a {
+  color: #2dea3b;
+  font-size: 55px;
+  font-family: "Spicy Rice", fantasy;
+}
+
+.purchaseLink {
+  text-align: center;
+}
+
+.purchaseLink a {
+  font-size: 18px;
+  padding: 0.5em 2em 0.5em 2em;
+  background-color: #e65746;
+  color: white;
+  border: none;
+  border-radius: 3px;
 }

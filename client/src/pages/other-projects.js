@@ -6,11 +6,10 @@ export default function OtherProjects() {
     <>
       <Head>
         <title>Other Projects</title>
-        <link href="https://fonts.cdnfonts.com/css/luminari" rel="stylesheet" />
       </Head>
       <ul>
-        <li>Game Design Blog</li>
-        <li>Developer Portfolio</li>
+        <li key="IndulgentCreativity">Game Design Blog</li>
+        <li key="DevPortfolio">Developer Portfolio</li>
       </ul>
     </>
   );

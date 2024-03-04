@@ -7,7 +7,6 @@ export default function MonstersBook2() {
     <>
       <Head>
         <title>Book Recommendations</title>
-        <link href="https://fonts.cdnfonts.com/css/luminari" rel="stylesheet" />
       </Head>
       <div className="generalText">
         <h2>My Favorites</h2>
@@ -20,27 +19,27 @@ export default function MonstersBook2() {
           recommendations based on your preference.
         </p>
         <ul>
-          <li>
+          <li key="Alcatraz">
             If you liked my book and want more lighthearted middle grade work,
             read{" "}
             <Link href="https://www.brandonsanderson.com/alcatraz-vs-the-evil-librarians-series/">
               Alcatraz vs. the Evil Librarians
             </Link>
           </li>
-          <li>
+          <li key="Mistborn">
             If you want amazing, fast-paced epic fantasy, read{" "}
             <Link href="https://www.brandonsanderson.com/the-mistborn-saga-the-original-trilogy/">
               Mistborn
             </Link>
           </li>
-          <li>
+          <li key="Stormlight">
             If you can accept fantasy with a slower pace but a greater payoff,
             my favorite of his series begins with{" "}
             <Link href="https://www.brandonsanderson.com/the-stormlight-archive-series/">
               The Way of Kings
             </Link>
           </li>
-          <li>Or almost any of his other books</li>
+          <li key="catchAll">Or almost any of his other books</li>
         </ul>
         <h3>
           <Link href="">Dragon Thief (Skystone Chronicles)</Link>

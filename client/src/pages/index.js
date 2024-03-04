@@ -1,14 +1,23 @@
 import Head from "next/head";
-import styles from "../styles/Home.module.css";
 import Pitch from "../components/pitch";
 import NewsContainer from "../components/news-container";
 import Link from "next/link";
+import Banner from "../components/banner";
+import MenuBar from "../components/menu-bar";
 
 export default function Home() {
   return (
     <>
-      <Pitch />
-      <NewsContainer />
+      <div className="topSection">
+        <Banner />
+        <MenuBar />
+        <Pitch />
+      </div>
+      <div className="bottomSection">
+        <div className="bottomContent">
+          <NewsContainer />
+        </div>
+      </div>
     </>
   );
 }

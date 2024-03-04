@@ -1,25 +1,41 @@
-import Image from "next/image";
-import bookCover from "../../public/images/MultiFormatBook.png";
-import React from "react";
+import Image from "next/legacy/image";
+import multiFormatCover from "../../public/images/MultiFormatBook.png";
+import singleFormatCover from "../../public/images/PrintBook.png";
+import React, { useState, useEffect } from "react";
+import { useRouter } from "next/router";
 import Link from "next/link";
 
-export default function Pitch() {
-  let location = "";
-  if (typeof window !== "undefined") {
-    location = window.location.pathname;
-  }
+export default function Pitch({ useSingleFormat }) {
+  const [showChapter1Link, setShowChapter1Link] = useState(true);
 
-  // If I switch to using React Router, it will look like this:
-  // import { useLocation } from 'react-router-dom';
-  // const location = useLocation();
+  const router = useRouter();
+  const { pathname } = router;
+
+  useEffect(() => {
+    if (pathname === "/") {
+      setShowChapter1Link(true);
+    } else {
+      setShowChapter1Link(false);
+    }
+  }, [pathname]);
 
   return (
     <>
       <div className="pitch">
         <div className="imageContainer">
-          <Image layout="responsive" src={bookCover} />
+          <Image
+            layout="responsive"
+            src={useSingleFormat ? singleFormatCover : multiFormatCover}
+          />
         </div>
         <div className="pitchText">
+          <div className="fancyTitle">
+            <div className="title-i-like">I Like</div>
+            <br />
+            <div className="title-monsters">Monsters</div>
+            <br />
+            <div className="title-except-my-teacher">(except my teacher)</div>
+          </div>
           <p>
             Sebastian's skills and reputation for trouble-making become valuable
             when his sixth-grade class is threatened by a supernatural menace.
@@ -32,19 +48,11 @@ export default function Pitch() {
             revealing what they know.
           </p>
 
-          <p>
-            As the Morugs escalate their efforts to find and eliminate the
-            Arkus, Sebastian begins learning of the experiences of those around
-            him and finds that even the most ordinary people have fascinating
-            stories to tell. And somewhere in one of those stories lies the key
-            to defeating the Morugs.
-          </p>
-
-          {location.includes("i-like-monsters") ? null : (
-            <h3 className="chapter-1-link">
-              Read Chapter 1 <Link href="/i-like-monsters#chapter1">here</Link>
-            </h3>
-          )}
+          {showChapter1Link ? (
+            <Link href="/i-like-monsters#chapter1" className="chapter-1-link">
+              Read Chapter 1
+            </Link>
+          ) : null}
         </div>
       </div>
       <div className="forceBelow"></div>
