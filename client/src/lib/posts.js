@@ -1,25 +1,24 @@
+import newsData from "../../data/NewsData";
+
 export function GetAllPostIds() {
   // This will be replaced with getting posts from the Database.
   return [
     {
       params: {
-        id: "firstPost",
+        id: "Book2Status",
       },
     },
     {
       params: {
-        id: "secondPost",
+        id: "WeAreLive",
       },
     },
   ];
 }
 
-export function GetPostData({ id }) {
+export function GetPostData(id) {
   // This will be replaced with data from DB, but it will follow the same format.
-  return {
-    id: "dummyId",
-    title: "dummyTitle",
-    details: "dummyDetails",
-    date: "dummyDate",
-  };
+  return newsData.items.filter((item) => {
+    return item.id === id;
+  })[0];
 }

@@ -1,15 +1,6 @@
 import Layout from "../../components/layout";
 import { GetAllPostIds, GetPostData } from "../../lib/posts";
-
-export default function News({ newsData }) {
-  return (
-    <div>
-      <h1>{newsData.title}</h1>
-      <div className="dateDisplay">{newsData.date}</div>
-      <div>{newsData.details}</div>
-    </div>
-  );
-}
+import ReactHtmlParser from "react-html-parser";
 
 // GetStaticPaths gets all valid IDs to represent possible pages
 export async function getStaticPaths() {
@@ -26,4 +17,14 @@ export async function getStaticProps({ params }) {
   return {
     props: { newsData },
   };
+}
+
+export default function News({ newsData }) {
+  return (
+    <div className="topSection">
+      <h1>{newsData.title}</h1>
+      <div className="dateDisplay">{newsData.date}</div>
+      <div>{ReactHtmlParser(newsData.details)}</div>
+    </div>
+  );
 }

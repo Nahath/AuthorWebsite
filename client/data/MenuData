@@ -1,0 +1,44 @@
+const menuData = {
+  menus: [
+    {
+      title: "Home",
+      mainLink: "/",
+      menuItems: [],
+    },
+    {
+      title: "Books",
+      mainLink: "books",
+      menuItems: [
+        {
+          text: "I Like Monsters (Except My Teacher)",
+          target: "/i-like-monsters",
+        },
+        {
+          text: "I Like Monsters Book 2 (title TBD)",
+          target: "/monsters-book-2",
+        },
+      ],
+    },
+    {
+      title: "Meet the Author",
+      mainLink: "/about-me",
+      menuItems: [],
+    },
+    {
+      title: "Other",
+      mainLink: "/other-projects",
+      menuItems: [
+        {
+          text: "Indulgent Creativity",
+          target: "https://indulgentcreativity.blogspot.com/",
+        },
+        {
+          text: "Book Recommendations",
+          target: "/book-recommendations",
+        },
+      ],
+    },
+  ],
+};
+
+export default menuData;

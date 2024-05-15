@@ -4,6 +4,7 @@ import NewsContainer from "../components/news-container";
 import Link from "next/link";
 import Banner from "../components/banner";
 import MenuBar from "../components/menu-bar";
+import MenuBarWrapper from "../components/menu-bar-wrapper";
 
 export default function Home() {
   return (
@@ -11,7 +12,7 @@ export default function Home() {
       <div className="topSection">
         <Banner />
         <MenuBar />
-        <Pitch />
+        <Pitch showChapter1Link={true} />
       </div>
       <div className="bottomSection">
         <div className="bottomContent">

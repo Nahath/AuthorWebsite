@@ -38,8 +38,11 @@ export default function Chapter1() {
         <p>
           “Talking in class again, Sebastian?” Mrs. Dalma, our math teacher,
           paused her lecture to glare at me. “Do you want me to send you to the
-          Principal?” What a dumb question. “Umm…. No. I’m sorry… Could I go to
-          the bathroom?” Man, I sounded stupid.
+          Principal?” What a dumb question.
+        </p>
+        <p>
+          “Umm…. No. I’m sorry… Could I go to the bathroom?” Man, I sounded
+          stupid.
         </p>
         <p>
           “You want me to let you go to the bathroom after you’ve been talking
@@ -47,13 +50,13 @@ export default function Chapter1() {
           connection between the two.
         </p>
         <p>
-          Should I try to reason with her or beg? Mrs. Dalma never listened to
-          reason, so I’d have to try for the second.
+          <i>Should I try to reason with her or beg?</i> Mrs. Dalma never
+          listened to reason, so I’d have to try for the second.
         </p>
         <p>
           Making sure it would be a lot less effort for her to say ‘yes’ than
-          ‘no,’ I started bouncing up and down in my chair. “But I really,
-          really need to go!”
+          ‘no,’ I started bouncing up and down in my chair. “But I{" "}
+          <i>really, really</i> need to go!”
         </p>
         <p>
           “All right, but you have to promise not to talk in class anymore.”
@@ -65,10 +68,10 @@ export default function Chapter1() {
           needed to be fast.
         </p>
         <p>
-          As soon as I got out of the classroom, I started running. Why don’t I
-          carry a cup around with me? I thought. Then right after was Why would
-          I carry a cup with me? It’s not like I predicted this. The cafeteria
-          had some.
+          As soon as I got out of the classroom, I started running.{" "}
+          <i>Why don’t I carry a cup around with me?</i> I thought. Then right
+          after was <i>Why would I carry a cup with me?</i> It’s not like I
+          predicted this. The cafeteria had some.
         </p>
         <p>
           I ran through the cafeteria to the space in the back where the
@@ -79,10 +82,10 @@ export default function Chapter1() {
         </p>
         <p>
           The bell rang as I was running toward the bathroom, so I slowed to a
-          walk in case any of the emerging teachers tried to detain me. This is
-          taking way too long. The rule against running in the hall was going to
-          get students killed if I wasn’t quick enough. That’s all that rules
-          were, though—ways to make people suffer.
+          walk in case any of the emerging teachers tried to detain me.{" "}
+          <i>This is taking way too long.</i> The rule against running in the
+          hall was going to get students killed if I wasn’t quick enough. That’s
+          all that rules were, though—ways to make people suffer.
         </p>
         <p>
           I got into the bathroom and looked across the two unoccupied toilets
@@ -157,9 +160,9 @@ export default function Chapter1() {
         <p>
           It worked. Well, at least, the part about getting horribly injured
           trying to save people worked. I wasn’t sure about the actual saving.
-          The hit on my shins was hard, and since I was busy trying to aim the
-          cup lobbing, I didn’t realize that I was swinging toward the counter
-          until my forehead slammed against it.
+          The hit on my shins was <i>hard</i>, and since I was busy trying to
+          aim the cup lobbing, I didn’t realize that I was swinging toward the
+          counter until my forehead slammed against it.
         </p>
         <p>
           I lied on the floor face down, moaning and wondering if it had been

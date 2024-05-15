@@ -11,7 +11,7 @@ export default function ILikeMonsters() {
         <title>I Like Monsters (Except My Teacher)</title>
       </Head>
       <div className="topSection">
-        <Pitch useSingleFormat={true} />
+        <Pitch useSingleFormat={true} showChapter1Link={false} />
       </div>
       <div className="bottomSection">
         <div className="bottomContent">

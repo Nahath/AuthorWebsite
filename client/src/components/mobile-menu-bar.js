@@ -2,6 +2,7 @@ import Menu from "./menu";
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
+import menuData from "../../data/MenuData";
 
 // menus object:
 // {
@@ -10,71 +11,24 @@ import Link from "next/link";
 //     ]
 // }
 
-const tempMenuData = {
-  menus: [
-    {
-      title: "Home",
-      mainLink: "/",
-      menuItems: [],
-    },
-    {
-      title: "Books",
-      mainLink: "books",
-      menuItems: [
-        {
-          text: "I Like Monsters (Except My Teacher)",
-          target: "i-like-monsters",
-        },
-        {
-          text: "I Like Monsters Book 2 (title TBD)",
-          target: "monsters-book-2",
-        },
-      ],
-    },
-    {
-      title: "Meet the Author",
-      mainLink: "about-me",
-      menuItems: [],
-    },
-    {
-      title: "Book Recommendations",
-      mainLink: "book-recommendations",
-      menuItems: [],
-    },
-    {
-      title: "Other Projects",
-      mainLink: "other-projects",
-      menuItems: [
-        {
-          text: "Indulgent Creativity",
-          target: "https://indulgentcreativity.blogspot.com/",
-        },
-        {
-          text: "Something Else",
-          target: "steampowered.com",
-        },
-      ],
-    },
-  ],
-};
-export default function MobileMenuBar() {
-  const [navClass, setNavClass] = useState("nonHomeNav");
+export default function MobileMenuBar({ hamburgerOpen }) {
+  // const [navClass, setNavClass] = useState("nonHomeNavMobile");
 
-  const router = useRouter();
-  const { pathname } = router;
+  // const router = useRouter();
+  // const { pathname } = router;
 
-  useEffect(() => {
-    if (pathname === "/") {
-      setNavClass("homeNav");
-    } else {
-      setNavClass("nonHomeNav");
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (pathname === "/") {
+  //     setNavClass("nonHomeNavMobile");
+  //   } else {
+  //     setNavClass("nonHomeNavMobile");
+  //   }
+  // }, []);
 
-  let menus = tempMenuData.menus;
+  let menus = menuData.menus;
 
   return (
-    <nav className={navClass + " mobileNav"}>
+    <nav className={`mobileNav ${hamburgerOpen ? "visible" : "hidden"}`}>
       <ul>
         {menus.map((menu) => {
           let content = "";
@@ -83,7 +37,7 @@ export default function MobileMenuBar() {
               <ul>
                 {menu.menuItems.map((item, index) => {
                   return (
-                    <li key={item.title}>
+                    <li key={item.text}>
                       <Link href={item.target}>{item.text}</Link>
                     </li>
                   );

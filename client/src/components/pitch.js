@@ -5,19 +5,19 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 
-export default function Pitch({ useSingleFormat }) {
-  const [showChapter1Link, setShowChapter1Link] = useState(true);
+export default function Pitch({ useSingleFormat, showChapter1Link }) {
+  // const [showChapter1Link, setShowChapter1Link] = useState(true);
 
-  const router = useRouter();
-  const { pathname } = router;
+  // const router = useRouter();
+  // const { pathname } = router;
 
-  useEffect(() => {
-    if (pathname === "/") {
-      setShowChapter1Link(true);
-    } else {
-      setShowChapter1Link(false);
-    }
-  }, [pathname]);
+  // useEffect(() => {
+  //   if (pathname === "/") {
+  //     setShowChapter1Link(true);
+  //   } else {
+  //     setShowChapter1Link(false);
+  //   }
+  // }, [pathname]);
 
   return (
     <>

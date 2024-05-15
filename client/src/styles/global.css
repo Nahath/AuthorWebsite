@@ -35,6 +35,12 @@ a {
   color: white;
 }
 
+h1 {
+  text-align: center;
+  font-family: "Redressed";
+  font-size: 48px;
+}
+
 .topSection {
   max-width: 72rem;
   padding: 0 1rem;
@@ -99,6 +105,7 @@ img {
   flex-wrap: wrap;
   list-style: none;
   vertical-align: top;
+  margin: 0 100px 0 100px;
 }
 
 .dropdown-list {
@@ -147,7 +154,6 @@ img {
 
 .newsContainer {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   padding-top: 8em;
 }
 
@@ -159,24 +165,42 @@ img {
   font-size: 50px;
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (max-width: 799px) {
   .newsContainer {
     clear: both;
-    margin-left: 20px;
+    display: block;
+    margin-left: 10px;
+  }
+  .authorBio {
+    margin-right: 2rem;
+    margin-left: 0;
   }
 }
 
 @media screen and (min-width: 800px) {
   .newsContainer {
     clear: both;
+    grid-template-columns: 1fr 1fr 1fr;
     margin-left: 20px;
+  }
+  .authorBio {
+    margin-right: 2rem;
+    margin-left: 0;
   }
 }
 
-@media screen and (max-width: 799px) {
+@media screen and (min-width: 1024px) {
   .newsContainer {
     clear: both;
-    margin-left: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 20px;
+  }
+  .book-recommendation {
+    margin: 0 6em 0 6em;
+  }
+  .authorBio {
+    margin-right: 10rem;
+    margin-left: 1rem;
   }
 }
 
@@ -186,7 +210,6 @@ img {
 
 .newsItem h2 {
   margin-top: 30px;
-  line-height: 0;
   color: #b23850;
 }
 
@@ -227,7 +250,13 @@ img {
 }
 
 .generalText {
-  margin: 12px;
+  margin: 0 12rem 0 4rem;
+}
+
+@media screen and (max-width: 800px) {
+  .generalText {
+    margin: 0 4rem 0 1rem;
+  }
 }
 
 nav {
@@ -317,4 +346,186 @@ nav {
   color: white;
   border: none;
   border-radius: 3px;
+}
+
+.book-recommendation li {
+  list-style-type: none;
+  max-width: 600px;
+  clear: both;
+}
+
+.book-recommendation h3 {
+  clear: both;
+  margin-bottom: -12px;
+}
+
+.book-recommendation h3 a {
+  color: #8a88fd;
+  font-size: 28px;
+}
+
+/* .book-recommendation * {
+  clear: both;
+} */
+
+.book-recommendation img {
+  float: left;
+  margin-bottom: 2px;
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
+.book-rec-image-container {
+  position: relative;
+  width: 400px;
+}
+
+.footer {
+  bottom: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  max-width: 60rem;
+  padding: 0 1rem 3rem 4rem;
+  margin: 1rem auto 3rem;
+  font-size: 24px;
+  justify-content: center;
+}
+
+@media screen and (max-width: 600px) {
+  .footer {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* .topSection {
+  max-width: 72rem;
+  padding: 0 1rem;
+  margin: 1rem auto 3rem;
+} */
+
+.footer input {
+  margin-right: 0.2rem;
+  padding: 5px;
+  font-size: 20px;
+}
+
+.footer button {
+  padding: 0.2rem 2rem 0.2rem 2rem;
+  background-color: #e65746;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.footer p {
+  margin-left: 0.5rem;
+}
+
+div.socialMedia {
+  margin: 4rem 0 0 3rem;
+}
+
+.aboutMeImage {
+  float: left;
+  margin: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+.hamburger {
+  display: none;
+}
+
+.mobileNav {
+  background-color: white;
+  color: black;
+  margin-top: -18px;
+}
+
+.mobileNav a {
+  color: black;
+}
+
+@media (max-width: 800px) {
+  .hamburger {
+    /* display: fixed;
+    width: 2rem;
+    height: 2rem; */
+    display: flex;
+    /* justify-content: space-around; */
+    /* flex-flow: column nowrap; */
+    z-index: 10;
+    background-color: white;
+  }
+  .hamburgerIntermediate {
+    margin: 0.1em 0.4em 0.2em 0.1em;
+  }
+  .showX .burger:nth-child(1) {
+    transform: rotate(45deg) translate(5px, -9px);
+  }
+
+  .showX .burger:nth-child(2) {
+    opacity: 0;
+  }
+
+  .showX .burger:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, 9px);
+  }
+
+  .nonHomeNav {
+    display: none;
+  }
+  .homeNav {
+    display: none;
+  }
+}
+
+@media (min-width: 801px) {
+  .mobileNav {
+    display: none;
+  }
+}
+
+.nonHomeHamburger {
+  color: black;
+  background-color: white;
+  padding: 0.1em 0.2em 0.1em 0.2em;
+}
+
+.homeHamburger {
+}
+
+.burger {
+  width: 2rem;
+  height: 0.25rem;
+  border-radius: 10px;
+  background-color: black;
+  transform-origin: 1px;
+  transition: all 0.1s linear;
+  margin-top: 0.25rem;
+}
+
+.errorMessage {
+  color: red;
+  font-size: 16px;
+}
+
+.nonHomeNavMobile {
+  transition: all 0.4s ease;
+}
+
+.hidden {
+  opacity: 0;
+  overflow: hidden;
+  max-height: 0;
+}
+.visible {
+  opacity: 1;
+  max-height: 30em;
+}
+
+.affiliateDisclosure {
+  font-size: 16px;
+  grid-column: span 2;
+  margin: 1.8rem 2rem 0 0;
 }
