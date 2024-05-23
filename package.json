@@ -5,8 +5,7 @@
     "build": "next build",
     "dev": "next dev",
     "export": "next export",
-	"start": "NODE_ENV=production node server.js",
-	"install": "install --force"
+	"start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
     "email-validator": "^2.0.4",
