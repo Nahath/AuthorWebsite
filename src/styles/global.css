@@ -461,6 +461,10 @@ div.socialMedia {
   .hamburgerIntermediate {
     margin: 0.1em 0.4em 0.2em 0.1em;
   }
+  .showX {
+    margin-bottom: 1.2em;
+  }
+
   .showX .burger:nth-child(1) {
     transform: rotate(45deg) translate(5px, -9px);
   }
