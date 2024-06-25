@@ -20,7 +20,7 @@ let headers = {
 export async function AddSubscriber(email) {
   let data = {
     email: email,
-    groups: ["WritingFans"],
+    groups: ["e9L92Z"], // id refers to group "WritingFans"
   };
 
   const response = await fetch(url, {
