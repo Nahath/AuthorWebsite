@@ -25,6 +25,7 @@ export default function BookRecommendations() {
             me before you discovered Sanderson, then I'd give one of three
             recommendations based on your preference.
           </p>
+          <br />
           <ul>
             <li key="Alcatraz">
               <Link href="https://www.brandonsanderson.com/alcatraz-vs-the-evil-librarians-series/">

@@ -45,7 +45,10 @@ export default function MenuBarWrapper() {
         <div onClick={toggleHamburger}>
           <Hamburger isOpen={hamburgerOpen} />
         </div>
-        <MobileMenuBar hamburgerOpen={hamburgerOpen} />
+        <MobileMenuBar
+          hamburgerOpen={hamburgerOpen}
+          toggleHamburger={toggleHamburger}
+        />
         {/* {hamburgerOpen && <MobileMenuBar />} */}
       </>
     );

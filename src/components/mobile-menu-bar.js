@@ -11,7 +11,7 @@ import menuData from "../../data/MenuData";
 //     ]
 // }
 
-export default function MobileMenuBar({ hamburgerOpen }) {
+export default function MobileMenuBar({ hamburgerOpen, toggleHamburger }) {
   // const [navClass, setNavClass] = useState("nonHomeNavMobile");
 
   // const router = useRouter();
@@ -38,7 +38,9 @@ export default function MobileMenuBar({ hamburgerOpen }) {
                 {menu.menuItems.map((item, index) => {
                   return (
                     <li key={item.text}>
-                      <Link href={item.target}>{item.text}</Link>
+                      <Link href={item.target} onClick={toggleHamburger}>
+                        {item.text}
+                      </Link>
                     </li>
                   );
                 })}
@@ -47,7 +49,9 @@ export default function MobileMenuBar({ hamburgerOpen }) {
           }
           return (
             <li key={menu.title}>
-              <Link href={menu.mainLink}>{menu.title}</Link>
+              <Link href={menu.mainLink} onClick={toggleHamburger}>
+                {menu.title}
+              </Link>
               {content}
             </li>
           );

@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import facebookIcon from "../../public/images/facebookIcon.png";
 import React, { useState } from "react";
+import { AddSubscriber } from "../../data/ExternalApiCaller";
 const validator = require("email-validator");
 
 export default function Footer() {
@@ -15,7 +16,7 @@ export default function Footer() {
       setIsValid(true);
       setSubmitted(true);
       setInputValue("");
-      // Post
+      AddSubscriber(inputValue);
     } else {
       setIsValid(false);
     }

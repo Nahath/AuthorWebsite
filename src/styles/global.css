@@ -42,6 +42,12 @@ h1 {
   font-size: 48px;
 }
 
+ul {
+  list-style-type: circle;
+  list-style: circle;
+  padding: 0.2em 0.1em 0.2em 1.8em;
+}
+
 .topSection {
   max-width: 72rem;
   padding: 0 1rem;
