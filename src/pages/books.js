@@ -10,7 +10,7 @@ export default function Books() {
       </Head>
       <div className="topSection">
         <Pitch showChapter1Link={true} useSingleFormat={true} />
-        <div className="generalText">
+        <div className="generalText my-books">
           <h2>Monsters Book 2</h2>
           <p>
             In progress. For more information, see the dedicated page{" "}

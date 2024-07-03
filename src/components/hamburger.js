@@ -16,9 +16,9 @@ export default function Hamburger({ isOpen }) {
   }, []);
   // const cls = "hamburger " + navClass;
 
-  const cls = "hamburger";
+  //const cls = "hamburger";
   return (
-    <div className={cls}>
+    <div className="hamburger">
       <div className={`hamburgerIntermediate${isOpen ? " showX" : ""}`}>
         <div className="burger" />
         <div className="burger" />
