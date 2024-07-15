@@ -9,6 +9,14 @@ import MenuBarWrapper from "../components/menu-bar-wrapper";
 export default function Home() {
   return (
     <>
+      <Head>
+        <meta property="og:title" content="Joshua McDonald Home Page" />
+        <meta
+          property="og:description"
+          content="Author of I Like Monsters (Except my Teacher)"
+        />
+        <meta property="og:image" content="../../public/images/PrintBook.png" />
+      </Head>
       <div className="topSection">
         <Banner />
         <MenuBar />

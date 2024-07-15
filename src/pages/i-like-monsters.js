@@ -9,6 +9,15 @@ export default function ILikeMonsters() {
     <>
       <Head>
         <title>I Like Monsters (Except My Teacher)</title>
+        <meta
+          property="og:title"
+          content="I Like Monsters (Except my Teacher)"
+        />
+        <meta
+          property="og:description"
+          content="A sixth grader using pranks to fight a supernatural menace"
+        />
+        <meta property="og:image" content="../../public/images/PrintBook.png" />
       </Head>
       <div className="topSection">
         <Pitch useSingleFormat={true} showChapter1Link={false} />
