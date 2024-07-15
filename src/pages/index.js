@@ -15,7 +15,10 @@ export default function Home() {
           property="og:description"
           content="Author of I Like Monsters (Except my Teacher)"
         />
-        <meta property="og:image" content="../../public/images/PrintBook.png" />
+        <meta
+          property="og:image"
+          content="https://joshuamcdonald.monster/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FPrintBook.51602a73.png&w=1920&q=75"
+        />
       </Head>
       <div className="topSection">
         <Banner />
