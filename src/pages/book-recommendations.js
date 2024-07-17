@@ -98,12 +98,10 @@ export default function BookRecommendations() {
           </p>
           <br />
           <h3>
-            <Link href="https://www.amazon.com/Going-Postal-Discworld-Terry-Pratchett/dp/0060502932">
-              Going Postal
-            </Link>
+            <Link href="https://amzn.to/3WpdEQx">Going Postal</Link>
           </h3>
           <p>
-            <Link href="https://www.amazon.com/Going-Postal-Discworld-Terry-Pratchett/dp/0060502932">
+            <Link href="https://amzn.to/3WpdEQx">
               <Image alt="Going Postal" src={goingPostal} />
             </Link>
             Though I've only read a small portion of Terry Pratchet's work, this
@@ -114,12 +112,12 @@ export default function BookRecommendations() {
           <br />
           <br />
           <h3>
-            <Link href="https://www.amazon.com/Hard-Magic-Book-Grimnoir-Chronicles-ebook/dp/B00APAHLMA">
+            <Link href="https://amzn.to/3zHFNcR">
               Hard Magic (Larry Correia)
             </Link>
           </h3>
           <p>
-            <Link href="https://www.amazon.com/Hard-Magic-Book-Grimnoir-Chronicles-ebook/dp/B00APAHLMA">
+            <Link href="https://amzn.to/3zHFNcR">
               <Image alt="Hard Magic" src={hardMagic} />
             </Link>
             The start of my favorite Urban Fantasy series and my favorite of

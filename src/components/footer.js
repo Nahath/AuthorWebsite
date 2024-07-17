@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import facebookIcon from "../../public/images/facebookIcon.png";
 import React, { useState } from "react";
-import { AddSubscriber } from "../../data/ExternalApiCaller";
 const validator = require("email-validator");
 
 export default function Footer() {
@@ -10,13 +9,19 @@ export default function Footer() {
   const [isValid, setIsValid] = useState(true);
   const [submitted, setSubmitted] = useState("");
 
-  function handleSubmit(e) {
+  async function handleSubmit(e) {
     e.preventDefault();
     if (validator.validate(inputValue)) {
       setIsValid(true);
-      setSubmitted(true);
-      setInputValue("");
-      AddSubscriber(inputValue);
+      const response = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ email: inputValue }),
+      });
+      if (response.ok) {
+        setSubmitted(true);
+        setInputValue("");
+      }
     } else {
       setIsValid(false);
     }

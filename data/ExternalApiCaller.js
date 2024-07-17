@@ -1,8 +1,7 @@
 const url = new URL("https://api.sender.net/v2/subscribers");
 
 let headers = {
-  Authorization:
-    "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiNjVlYThkODNlN2QzNTlhNjdhM2FlNTIxNDYxNDBiN2MyZmNiZTQ1Nzg2MmNiNzU0M2Q5YmUwNzc4ZGJjMjcyZTQyZTEwMDdmYzQzMGNjZTkiLCJpYXQiOiIxNzE5MDk3NzYxLjU2NjU0MCIsIm5iZiI6IjE3MTkwOTc3NjEuNTY2NTQ1IiwiZXhwIjoiNDg3MjY5Nzc2MS41NjMxMDMiLCJzdWIiOiI4ODgxNzEiLCJzY29wZXMiOltdfQ.wN-GI_yxCodlFDaWUOJYjgQwPwni41grpqMqNUWB4tQkqfKaxkbkpBWHz91g-W864VgqsfBYDOD50qFiNAK_Iw",
+  Authorization: `${process.env.SENDER_API_TOKEN}`,
   "Content-Type": "application/json",
   Accept: "application/json",
 };

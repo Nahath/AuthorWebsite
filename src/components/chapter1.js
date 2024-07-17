@@ -177,9 +177,7 @@ export default function Chapter1() {
       </div>
       <div className="purchaseLink">
         <span>
-          <a href="https://www.amazon.com/Like-Monsters-Except-My-Teacher-ebook/dp/B0C9R4TQ42">
-            Buy the Book Here
-          </a>
+          <a href="https://amzn.to/469JsfJ">Buy the Book Here</a>
         </span>
       </div>
       <br />
