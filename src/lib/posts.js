@@ -18,7 +18,5 @@ export function GetAllPostIds() {
 
 export function GetPostData(id) {
   // This will be replaced with data from DB, but it will follow the same format.
-  return newsData.items.filter((item) => {
-    return item.id === id;
-  })[0];
+  return newsData.items.find((item) => item.id === id) ?? null;
 }

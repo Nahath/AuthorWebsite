@@ -177,7 +177,7 @@ export default function Chapter1() {
       </div>
       <div className="purchaseLink">
         <span>
-          <a href="https://amzn.to/469JsfJ">Buy the Book Here</a>
+          <a href="https://www.amazon.com/dp/B0CH4KF1LT/">Buy the Book Here</a>
         </span>
       </div>
       <br />

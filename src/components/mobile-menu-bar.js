@@ -1,6 +1,4 @@
-import Menu from "./menu";
-import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
+import React from "react";
 import Link from "next/link";
 import menuData from "../../data/MenuData";
 
@@ -12,19 +10,6 @@ import menuData from "../../data/MenuData";
 // }
 
 export default function MobileMenuBar({ hamburgerOpen, toggleHamburger }) {
-  // const [navClass, setNavClass] = useState("nonHomeNavMobile");
-
-  // const router = useRouter();
-  // const { pathname } = router;
-
-  // useEffect(() => {
-  //   if (pathname === "/") {
-  //     setNavClass("nonHomeNavMobile");
-  //   } else {
-  //     setNavClass("nonHomeNavMobile");
-  //   }
-  // }, []);
-
   let menus = menuData.menus;
 
   return (

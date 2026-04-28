@@ -6,16 +6,6 @@ let headers = {
   Accept: "application/json",
 };
 
-// let data = {
-//   "email": "support@sender.net",
-//   "groups": ["eZVD4w", "b2vAR1"]
-// };
-
-// fetch(url, {
-//     method: "POST",
-//     headers,body: JSON.stringify(data)
-// }).then(response => response.json());
-
 export async function AddSubscriber(email) {
   let data = {
     email: email,

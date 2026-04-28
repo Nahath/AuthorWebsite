@@ -1,31 +1,17 @@
-import Image from "next/legacy/image";
+import Image from "next/image";
 import multiFormatCover from "../../public/images/MultiFormatBook.png";
 import singleFormatCover from "../../public/images/PrintBook.png";
-import React, { useState, useEffect } from "react";
-import { useRouter } from "next/router";
 import Link from "next/link";
 
 export default function Pitch({ useSingleFormat, showChapter1Link }) {
-  // const [showChapter1Link, setShowChapter1Link] = useState(true);
-
-  // const router = useRouter();
-  // const { pathname } = router;
-
-  // useEffect(() => {
-  //   if (pathname === "/") {
-  //     setShowChapter1Link(true);
-  //   } else {
-  //     setShowChapter1Link(false);
-  //   }
-  // }, [pathname]);
-
   return (
     <>
       <div className="pitch">
         <div className="imageContainer">
           <Image
-            layout="responsive"
+            alt="I Like Monsters book cover"
             src={useSingleFormat ? singleFormatCover : multiFormatCover}
+            style={{ width: "100%", height: "auto" }}
           />
         </div>
         <div className="pitchText">
@@ -59,4 +45,3 @@ export default function Pitch({ useSingleFormat, showChapter1Link }) {
     </>
   );
 }
-// src="/images/ILikeMonstersCover.jpg"

@@ -23,7 +23,6 @@ export default function MenuBarWrapper() {
   }, []);
 
   function toggleHamburger() {
-    console.log("toggled Hamburger: " + hamburgerOpen);
     setHamburgerOpen(!hamburgerOpen);
   }
 
@@ -49,7 +48,6 @@ export default function MenuBarWrapper() {
           hamburgerOpen={hamburgerOpen}
           toggleHamburger={toggleHamburger}
         />
-        {/* {hamburgerOpen && <MobileMenuBar />} */}
       </>
     );
   } else {

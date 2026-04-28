@@ -14,7 +14,6 @@ export default function AboutMe() {
           width={230}
           height={385}
           className="aboutMeImage"
-          layout="fixed"
           src={joshHead}
         />
         <div className="authorBio">

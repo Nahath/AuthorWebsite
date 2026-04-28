@@ -62,6 +62,7 @@ export default function Footer() {
       <div className="socialMedia">
         <a
           target="_blank"
+          rel="noopener noreferrer"
           href="https://www.facebook.com/profile.php?id=61555529261761"
         >
           <Image alt="My Facebook Page" src={facebookIcon} />

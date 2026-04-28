@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
 import notBookCover from "../../public/images/NotTheCover.png";
-import MobileMenuBar from "../components/mobile-menu-bar";
 
 export default function MonstersBook2() {
   return (
@@ -13,7 +12,7 @@ export default function MonstersBook2() {
         <h1 style={{ marginBottom: -60 }}>Book 2</h1>
         <div className="pitch">
           <div className="imageContainer">
-            <Image layout="responsive" src={notBookCover} />
+            <Image alt="Placeholder cover for Monsters Book 2" src={notBookCover} />
           </div>
           <div>
             <p>
@@ -30,7 +29,6 @@ export default function MonstersBook2() {
           </div>
         </div>
       </div>
-      {/* <MobileMenuBar /> */}
     </>
   );
 }
