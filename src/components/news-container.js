@@ -1,34 +1,12 @@
-import NewsItem from "./news-item";
-import newsData from "../../data/NewsData";
+import NewsItem from './news-item'
 
-// newsItems is thus:
-// {
-//     newsItems: [
-//         {
-//             title:,
-//             details:
-//         },
-//         {
-//             title:,
-//             details:
-//         }
-//     ]
-// }
-
-export default function NewsContainer() {
-  // export default function NewsContainer({ newsItems }) {
-  let newsItems = newsData.items;
-
+export default function NewsContainer({ newsItems }) {
   return (
     <div className="newsContainer">
       <div className="newsHeader">Latest News</div>
-      {newsItems.map((item) => {
-        return <NewsItem newsData={item} key={item.id} />;
-      })}
-      <br />
-      <br />
-      <br />
-      <br />
+      {newsItems.map((item) => (
+        <NewsItem newsData={item} key={item._id} />
+      ))}
     </div>
-  );
+  )
 }

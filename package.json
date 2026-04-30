@@ -8,11 +8,12 @@
     "start": "NODE_ENV=production node server.js"
   },
   "dependencies": {
+    "@portabletext/react": "^3.2.4",
+    "@sanity/client": "^6.29.1",
     "email-validator": "^2.0.4",
     "next": "latest",
     "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "react-html-parser": "^2.0.2"
+    "react-dom": "18.2.0"
   },
   "engines": {
     "node": ">=18"
