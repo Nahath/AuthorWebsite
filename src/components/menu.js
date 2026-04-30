@@ -17,9 +17,14 @@ export default function Menu({ menuData }) {
       <div>
         <ul className={className}>
           {menuData.menuItems.map((item, index) => {
+            const isExternal = item.target.startsWith("https://") || item.target.startsWith("http://");
             return (
               <li className="dropdown-menu-item" key={index}>
-                <Link href={item.target}>{item.text}</Link>
+                {isExternal ? (
+                  <a href={item.target} target="_blank" rel="noopener noreferrer">{item.text}</a>
+                ) : (
+                  <Link href={item.target}>{item.text}</Link>
+                )}
               </li>
             );
           })}
