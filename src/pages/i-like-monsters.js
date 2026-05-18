@@ -1,7 +1,6 @@
 import Head from "next/head";
 import Pitch from "../components/pitch";
 import Chapter1 from "../components/chapter1";
-import MenuBar from "../components/menu-bar";
 import Link from "next/link";
 
 export default function ILikeMonsters() {

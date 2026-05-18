@@ -1,5 +1,12 @@
 import Head from "next/head";
-import Link from "next/link";
+
+function ExternalLink({ href, children }) {
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      {children}
+    </a>
+  );
+}
 
 export default function ForWriters() {
   return (
@@ -15,7 +22,7 @@ export default function ForWriters() {
           that have helped me.
         </p>
         <h3>
-          <Link href="https://writingexcuses.com/">Writing Excuses</Link>
+          <ExternalLink href="https://writingexcuses.com/">Writing Excuses</ExternalLink>
         </h3>
         <p>
           A very long-running podcast that I've learned a lot from, though I
@@ -31,9 +38,9 @@ export default function ForWriters() {
           </ol>
         </p>
         <h3>
-          <Link href="https://www.bookbaby.com/partner-referral/Joshua-McDonald">
+          <ExternalLink href="https://www.bookbaby.com/partner-referral/Joshua-McDonald">
             BookBaby
-          </Link>
+          </ExternalLink>
         </h3>
         <p>
           This is the company I used to do a lot of the legwork for my book
@@ -49,9 +56,9 @@ export default function ForWriters() {
           there.
         </p>
         <h3>
-          <Link href="https://www.youtube.com/watch?v=1kxc0Z3FqvU">
+          <ExternalLink href="https://www.youtube.com/watch?v=1kxc0Z3FqvU">
             Random Youtube on Amazon Ads
-          </Link>
+          </ExternalLink>
         </h3>
         <p>
           I've watched a number of videos on book marketing, and this one was

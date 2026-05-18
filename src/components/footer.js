@@ -7,20 +7,24 @@ const validator = require("email-validator");
 export default function Footer() {
   const [inputValue, setInputValue] = useState("");
   const [isValid, setIsValid] = useState(true);
-  const [submitted, setSubmitted] = useState("");
+  const [submitted, setSubmitted] = useState(false);
 
   async function handleSubmit(e) {
     e.preventDefault();
     if (validator.validate(inputValue)) {
       setIsValid(true);
-      const response = await fetch("/api/subscribe", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: inputValue }),
-      });
-      if (response.ok) {
-        setSubmitted(true);
-        setInputValue("");
+      try {
+        const response = await fetch("/api/subscribe", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email: inputValue }),
+        });
+        if (response.ok) {
+          setSubmitted(true);
+          setInputValue("");
+        }
+      } catch (e) {
+        // Network error — leave form intact so user can try again
       }
     } else {
       setIsValid(false);
@@ -46,8 +50,7 @@ export default function Footer() {
               type="text"
               value={inputValue}
               onChange={handleInputChange}
-              // placeholder="Enter text"
-            />
+/>
             <button type="submit">Subscribe</button>
           </form>
           {!isValid && <div className="errorMessage">Invalid Email</div>}

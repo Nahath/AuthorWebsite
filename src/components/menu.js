@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { useState } from "react";
 import { useRouter } from "next/router";
 
 export default function Menu({ menuData }) {
@@ -19,7 +18,7 @@ export default function Menu({ menuData }) {
           {menuData.menuItems.map((item, index) => {
             const isExternal = item.target.startsWith("https://") || item.target.startsWith("http://");
             return (
-              <li className="dropdown-menu-item" key={index}>
+              <li className="dropdown-menu-item" key={item.text}>
                 {isExternal ? (
                   <a href={item.target} target="_blank" rel="noopener noreferrer">{item.text}</a>
                 ) : (
@@ -42,4 +41,3 @@ export default function Menu({ menuData }) {
   );
 }
 
-// menuData should look like this example object

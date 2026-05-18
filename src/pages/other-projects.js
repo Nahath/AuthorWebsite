@@ -1,7 +1,4 @@
 import Head from "next/head";
-import MenuBar from "../components/menu-bar";
-import Link from "next/link";
-
 export default function OtherProjects() {
   return (
     <>
@@ -12,9 +9,9 @@ export default function OtherProjects() {
         <h1>Other Projects</h1>
         <div className="generalText">
           <h3>
-            <Link href="https://indulgentcreativity.blogspot.com/">
+            <a href="https://indulgentcreativity.blogspot.com/" target="_blank" rel="noopener noreferrer">
               Indulgent Creativity
-            </Link>
+            </a>
           </h3>
           <p>
             I have a few other things going on. Notably, I'm working on building

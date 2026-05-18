@@ -18,7 +18,12 @@ export default async function handler(req, res) {
     body: JSON.stringify({ email, groups: ["e9L92Z"] }),
   });
 
-  const result = await response.json();
+  let result;
+  try {
+    result = await response.json();
+  } catch (e) {
+    result = null;
+  }
 
   if (!response.ok) {
     return res.status(response.status).json({ error: result });

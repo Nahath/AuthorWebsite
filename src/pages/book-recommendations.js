@@ -1,12 +1,19 @@
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import alcatraz from "../../public/images/Alcatraz.jpg";
 import mistborn from "../../public/images/Mistborn.png";
 import stormlight from "../../public/images/Way-of-Kings.jpg";
 import dragonThief from "../../public/images/Dragon-Thief.jpg";
 import goingPostal from "../../public/images/Going-Postal.jpg";
 import hardMagic from "../../public/images/Hard-Magic.jpg";
+
+function ExternalLink({ href, children }) {
+  return (
+    <a href={href} target="_blank" rel="noopener noreferrer">
+      {children}
+    </a>
+  );
+}
 
 export default function BookRecommendations() {
   return (
@@ -18,7 +25,7 @@ export default function BookRecommendations() {
         <h1>My Favorites</h1>
         <div className="book-recommendation">
           <h3>
-            <Link href="https://brandonsanderson.com">Brandon Sanderson</Link>
+            <ExternalLink href="https://brandonsanderson.com">Brandon Sanderson</ExternalLink>
           </h3>
           <p>
             In my view, the best author writing today. If you somehow discovered
@@ -28,46 +35,46 @@ export default function BookRecommendations() {
           <br />
           <ul>
             <li key="Alcatraz">
-              <Link href="https://www.brandonsanderson.com/alcatraz-vs-the-evil-librarians-series/">
+              <ExternalLink href="https://www.brandonsanderson.com/alcatraz-vs-the-evil-librarians-series/">
                 <Image alt="Alcatraz" src={alcatraz} />
-              </Link>
+              </ExternalLink>
               If you liked my book and want more lighthearted middle grade work,
               read &nbsp;
-              <Link href="https://www.brandonsanderson.com/alcatraz-vs-the-evil-librarians-series/">
+              <ExternalLink href="https://www.brandonsanderson.com/alcatraz-vs-the-evil-librarians-series/">
                 Alcatraz vs. the Evil Librarians
-              </Link>
+              </ExternalLink>
             </li>
             <li key="Mistborn">
-              <Link href="https://www.brandonsanderson.com/the-mistborn-saga-the-original-trilogy/">
+              <ExternalLink href="https://www.brandonsanderson.com/the-mistborn-saga-the-original-trilogy/">
                 <Image alt="Mistborn" src={mistborn} />
-              </Link>
+              </ExternalLink>
               If you want amazing, fast-paced epic fantasy, read &nbsp;
-              <Link href="https://www.brandonsanderson.com/the-mistborn-saga-the-original-trilogy/">
+              <ExternalLink href="https://www.brandonsanderson.com/the-mistborn-saga-the-original-trilogy/">
                 Mistborn
-              </Link>
+              </ExternalLink>
             </li>
             <li key="Stormlight">
-              <Link href="https://www.brandonsanderson.com/the-stormlight-archive-series/">
+              <ExternalLink href="https://www.brandonsanderson.com/the-stormlight-archive-series/">
                 <Image alt="Stormlight" src={stormlight} />
-              </Link>
+              </ExternalLink>
               If you can accept fantasy with a slower pace but a greater payoff,
               my favorite of his series begins with &nbsp;
-              <Link href="https://www.brandonsanderson.com/the-stormlight-archive-series/">
+              <ExternalLink href="https://www.brandonsanderson.com/the-stormlight-archive-series/">
                 The Way of Kings
-              </Link>
+              </ExternalLink>
             </li>
-            <li clear="catchAll">Or almost any of his other books.</li>
+            <li>Or almost any of his other books.</li>
           </ul>
           <br />
           <h3>
-            <Link href="https://www.skystonechronicles.com/">
+            <ExternalLink href="https://www.skystonechronicles.com/">
               Dragon Thief (Skystone Chronicles)
-            </Link>
+            </ExternalLink>
           </h3>
           <p>
-            <Link href="https://www.skystonechronicles.com/">
+            <ExternalLink href="https://www.skystonechronicles.com/">
               <Image alt="Dragon Thief" src={dragonThief} />
-            </Link>
+            </ExternalLink>
             Funny, entertaining characters, great twists, but there's one truly
             remarkable thing about this book, which I will explain by talking
             about a cliche that plagues so many books.
@@ -98,12 +105,12 @@ export default function BookRecommendations() {
           </p>
           <br />
           <h3>
-            <Link href="https://amzn.to/3WpdEQx">Going Postal</Link>
+            <ExternalLink href="https://amzn.to/3WpdEQx">Going Postal</ExternalLink>
           </h3>
           <p>
-            <Link href="https://amzn.to/3WpdEQx">
+            <ExternalLink href="https://amzn.to/3WpdEQx">
               <Image alt="Going Postal" src={goingPostal} />
-            </Link>
+            </ExternalLink>
             Though I've only read a small portion of Terry Pratchet's work, this
             one is definitely my favorite. Clever humor that even manages to go
             into deep political principles without a hint of taking sides.
@@ -112,14 +119,14 @@ export default function BookRecommendations() {
           <br />
           <br />
           <h3>
-            <Link href="https://amzn.to/3zHFNcR">
+            <ExternalLink href="https://amzn.to/3zHFNcR">
               Hard Magic (Larry Correia)
-            </Link>
+            </ExternalLink>
           </h3>
           <p>
-            <Link href="https://amzn.to/3zHFNcR">
+            <ExternalLink href="https://amzn.to/3zHFNcR">
               <Image alt="Hard Magic" src={hardMagic} />
-            </Link>
+            </ExternalLink>
             The start of my favorite Urban Fantasy series and my favorite of
             Larry Correia's work. One of the skills masterfully executed here is
             creating deep characters with strong personalities using very few
